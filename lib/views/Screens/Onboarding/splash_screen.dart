@@ -13,10 +13,15 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child:Image.asset('assets/images/Logo.png', 
-        height: 100,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+             Image.asset('assets/images/Logo.png', 
+             height: 100,
         ),
+          ]
       ),
+      )
     );
   }
 }
