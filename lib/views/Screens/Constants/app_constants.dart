@@ -23,3 +23,37 @@ class AppFonts {
     fontWeight: FontWeight.normal,
   );
 }
+
+// ignore: camel_case_types
+class customButton {
+  ElevatedButton buildButton({
+    required String text,
+    required VoidCallback onPressed,
+    required Color color,
+    required Color textColor,
+    required double width,
+    required double height,
+    required double fontSize,
+    required FontWeight fontWeight,
+    required double borderRadius,
+  }) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        primary: color,
+        minimumSize: Size(width, height),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(borderRadius),
+        ),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: textColor,
+          fontSize: fontSize,
+          fontWeight: fontWeight,
+        ),
+      ),
+    );
+  }
+} 
