@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -19,6 +20,11 @@ class _SplashScreenState extends State<SplashScreen> {
              Image.asset('assets/images/Logo.png', 
              height: 100,
         ),
+        SizedBox(height: 20),
+            const SpinKitDoubleBounce(
+              color: Colors.white,
+              size: 50.0,
+            ),
           ]
       ),
       )
