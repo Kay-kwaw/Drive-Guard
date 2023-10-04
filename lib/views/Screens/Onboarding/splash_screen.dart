@@ -10,6 +10,13 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState(){
+    super.initState();
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushNamed(context, '/onboarding');
+    });
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
@@ -20,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
              Image.asset('assets/images/Logo.png', 
              height: 100,
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
             const SpinKitDoubleBounce(
               color: Colors.white,
               size: 50.0,
