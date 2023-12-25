@@ -22,3 +22,23 @@ final ThemeData kAppTheme = ThemeData(
     ),
   ),
 );
+
+class AppFonts {
+  static const String Montserrat = 'Montserrat';
+  // Add more font constants as needed
+
+  // TextStyle constants for common text styles
+  static const TextStyle headline1 = TextStyle(
+    fontFamily: Montserrat,
+    fontSize: 28.0,
+    fontWeight: FontWeight.bold,
+  );
+
+  static const TextStyle bodyText = TextStyle(
+    fontFamily: Montserrat,
+    fontSize: 16.0,
+    fontWeight: FontWeight.normal,
+  );
+
+  // Add more TextStyle constants as needed
+}
