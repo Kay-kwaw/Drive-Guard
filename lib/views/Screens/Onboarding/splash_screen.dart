@@ -1,3 +1,4 @@
+import 'package:drive_guard/views/Screens/Onboarding/Onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -13,7 +14,13 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState(){
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushNamed(context, '/onboarding');
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) =>  OnboardingScreen(), // Replace with your destination screen
+          ),
+        );
+      // Navigator.pushReplacementNamed(context, '/ Onboarding');
     });
   }
 
