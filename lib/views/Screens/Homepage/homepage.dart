@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class HomePageWidget extends StatefulWidget {
   const HomePageWidget({Key? key}) : super(key: key);
@@ -17,8 +18,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
 
   @override
   void dispose() {
-    _model.dispose();
-
     super.dispose();
   }
 
@@ -26,61 +25,65 @@ class _HomePageWidgetState extends State<HomePageWidget>
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).background,
+      backgroundColor: Color.fromARGB(255, 236, 236, 236),
       body: SafeArea(
         top: true,
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(24, 16, 24, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
                       'Your Car',
-                      style: FlutterFlowTheme.of(context).bodySmall,
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
                     ),
                   ],
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(24, 4, 24, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
                       'Fleet Model 42',
-                      style: FlutterFlowTheme.of(context).displaySmall.override(
+                      style: TextStyle(
                             fontFamily: 'Outfit',
-                            color: FlutterFlowTheme.of(context).dark400,
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold
                           ),
                     ),
                   ],
                 ),
               ),
               Image.asset(
-                'assets/images/carHome@3x.png',
+                'assets/images/car_image.png',
                 width: MediaQuery.sizeOf(context).width,
                 height: 240,
                 fit: BoxFit.cover,
-              ).animateOnPageLoad(animationsMap['imageOnPageLoadAnimation']!),
+              ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
                 child: LinearPercentIndicator(
                   percent: 0.4,
                   width: MediaQuery.sizeOf(context).width * 0.9,
                   lineHeight: 24,
                   animation: true,
                   animateFromLastPercent: true,
-                  progressColor: FlutterFlowTheme.of(context).primary,
-                  backgroundColor: FlutterFlowTheme.of(context).grayLighter,
-                  barRadius: Radius.circular(40),
+                  progressColor: Colors.green,
+                  backgroundColor: Colors.grey.shade300,
+                  barRadius: const Radius.circular(40),
                   padding: EdgeInsets.zero,
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 12),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
@@ -94,12 +97,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                           child: Text(
                             'Charge',
-                            style: FlutterFlowTheme.of(context).bodySmall,
+                            style: TextStyle(),
                           ),
                         ),
                         Text(
                           '70%',
-                          style: FlutterFlowTheme.of(context).displaySmall,
+                          style: TextStyle(),
                         ),
                       ],
                     ),
@@ -111,12 +114,15 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                           child: Text(
                             'Range',
-                            style: FlutterFlowTheme.of(context).bodySmall,
+                            style: TextStyle(),
                           ),
                         ),
                         Text(
                           '329m',
-                          style: FlutterFlowTheme.of(context).displaySmall,
+                          style: TextStyle(
+                                fontFamily: 'Outfit',
+                                color: Colors.white,
+                              )
                         ),
                       ],
                     ),
@@ -128,16 +134,14 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                           child: Text(
                             'Status',
-                            style: FlutterFlowTheme.of(context).bodySmall,
+                            style: TextStyle(),
                           ),
                         ),
                         Text(
                           'Good',
-                          style: FlutterFlowTheme.of(context)
-                              .displaySmall
-                              .override(
+                          style: TextStyle(
                                 fontFamily: 'Outfit',
-                                color: FlutterFlowTheme.of(context).primary,
+                                color: Colors.white,
                               ),
                         ),
                       ],
@@ -149,8 +153,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                 width: MediaQuery.sizeOf(context).width * 0.9,
                 height: 70,
                 decoration: BoxDecoration(
-                  color: Color(0x9A090F13),
-                  boxShadow: [
+                  color: const Color(0x9A090F13),
+                  boxShadow: const [
                     BoxShadow(
                       blurRadius: 4,
                       color: Color(0x43000000),
@@ -163,7 +167,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -172,17 +176,17 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             width: 50,
                             height: 50,
                             clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                             ),
                             child: Image.asset(
-                              'assets/images/imageLogo@3x.png',
+                              'assets/images/car_image.png'
                             ),
                           ),
                         ],
                       ),
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(12, 0, 16, 0),
                         child: Column(
@@ -196,8 +200,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 Text(
                                   'Fleet Assistant',
                                   textAlign: TextAlign.start,
-                                  style: GoogleFonts.getFont(
-                                    'Lexend Deca',
+                                  style: TextStyle(
+                                    
                                     color: Color(0xB3FFFFFF),
                                     fontSize: 12,
                                   ),
@@ -205,8 +209,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 Text(
                                   '4:30pm',
                                   textAlign: TextAlign.end,
-                                  style: GoogleFonts.getFont(
-                                    'Lexend Deca',
+                                  style:TextStyle(
                                     color: Color(0xB3FFFFFF),
                                     fontSize: 12,
                                   ),
@@ -221,12 +224,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 children: [
                                   Text(
                                     'Battery is in need of charging.',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
+                                    style: TextStyle(
                                           fontFamily: 'Outfit',
-                                          color: FlutterFlowTheme.of(context)
-                                              .alternate,
+                                          color: Colors.white,
                                         ),
                                   ),
                                 ],
@@ -240,7 +240,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -249,8 +249,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       width: MediaQuery.sizeOf(context).width * 0.4,
                       height: 150,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondary,
-                        boxShadow: [
+                        color: Colors.black,
+                        boxShadow: const [
                           BoxShadow(
                             blurRadius: 4,
                             color: Color(0x37000000),
@@ -265,16 +265,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed(
-                            'carDriving',
-                            extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
-                                hasTransition: true,
-                                transitionType: PageTransitionType.bottomToTop,
-                                duration: Duration(milliseconds: 250),
-                              ),
-                            },
-                          );
+                          
                         },
                         child: const Column(
                           mainAxisSize: MainAxisSize.max,
@@ -339,7 +330,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         children: [
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
+                                const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                             child: Icon(
                               Icons.electric_car,
                               color: Colors.lightGreenAccent.shade400,
@@ -347,7 +338,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                            padding: const EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                             child: Text(
                               'Car Charging',
                               textAlign: TextAlign.center,
