@@ -25,7 +25,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color.fromARGB(255, 236, 236, 236),
+      backgroundColor: const Color.fromARGB(255, 236, 236, 236),
       body: SafeArea(
         top: true,
         child: SingleChildScrollView(
@@ -70,14 +70,14 @@ class _HomePageWidgetState extends State<HomePageWidget>
                 fit: BoxFit.cover,
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20, 0, 16, 0),
                 child: LinearPercentIndicator(
                   percent: 0.4,
                   width: MediaQuery.sizeOf(context).width * 0.9,
                   lineHeight: 24,
                   animation: true,
                   animateFromLastPercent: true,
-                  progressColor: Colors.green,
+                  progressColor: const Color.fromARGB(255, 58, 128, 1),
                   backgroundColor: Colors.grey.shade300,
                   barRadius: const Radius.circular(40),
                   padding: EdgeInsets.zero,
@@ -102,7 +102,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         ),
                         Text(
                           '70%',
-                          style: TextStyle(),
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
                         ),
                       ],
                     ),
@@ -120,8 +123,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         Text(
                           '329m',
                           style: TextStyle(
-                                fontFamily: 'Outfit',
-                                color: Colors.white,
+                                 fontWeight: FontWeight.bold,
+                                 color: Colors.black,
+                                 fontSize: 20,
                               )
                         ),
                       ],
@@ -140,8 +144,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         Text(
                           'Good',
                           style: TextStyle(
-                                fontFamily: 'Outfit',
-                                color: Colors.white,
+                                 fontWeight: FontWeight.bold,
+                                 color: Colors.black,
+                                 fontSize: 20,
                               ),
                         ),
                       ],
@@ -287,7 +292,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                       fontFamily: 'Outfit',
-                                      color: Colors.black,
+                                      color: Color.fromARGB(255, 255, 255, 255),
                                     ),
                               ),
                             ),
@@ -314,7 +319,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       width: MediaQuery.sizeOf(context).width * 0.4,
                       height: 150,
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: const Color.fromARGB(255, 58, 128, 1),
                         boxShadow: const [
                           BoxShadow(
                             blurRadius: 3,
@@ -324,32 +329,32 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         ],
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: Column(
+                      child: const Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
                             padding:
-                                const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                             child: Icon(
                               Icons.electric_car,
-                              color: Colors.lightGreenAccent.shade400,
+                              color: Colors.white,
                               size: 44,
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                             child: Text(
                               'Car Charging',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                     fontFamily: 'Outfit',
                                     color:
-                                        Colors.lightGreenAccent.shade400,
+                                        Colors.white,
                                   ),
                             ),
                           ),
-                          const Expanded(
+                          Expanded(
                             child: Padding(
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(8, 4, 8, 0),
