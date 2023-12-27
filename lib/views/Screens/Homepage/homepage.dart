@@ -1,8 +1,10 @@
 
 
 import 'package:drive_guard/views/Screens/Constants/app_constants.dart';
+import 'package:drive_guard/views/Screens/Constants/nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
+
 
 class HomePageWidget extends StatefulWidget {
   const HomePageWidget({Key? key}) : super(key: key);
@@ -13,6 +15,7 @@ class HomePageWidget extends StatefulWidget {
 
 class _HomePageWidgetState extends State<HomePageWidget>
     with TickerProviderStateMixin {
+       int _currentIndex =0;
 
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -91,7 +94,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                           child: Text(
                             'Charge',
-                            style: TextStyle(),
+                            style: TextStyle(
+                              color: Colors.grey
+                            ),
                           ),
                         ),
                         Text(
@@ -112,7 +117,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                           child: Text(
                             'Range',
-                            style: TextStyle(),
+                            style: TextStyle(
+                              color: Colors.grey
+                            ),
                           ),
                         ),
                         Text(
@@ -133,7 +140,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                           child: Text(
                             'Status',
-                            style: TextStyle(),
+                            style: TextStyle(
+                              color: Colors.grey
+                            ),
                           ),
                         ),
                         Text(
@@ -369,8 +378,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   ],
                 ),
               ),
-            ],
-          ),
+              const SizedBox(height: 20,),
+             MyBottomNavigationBar(currentIndex: _currentIndex, onTap: (index) {
+              setState(() {
+                _currentIndex = index;
+              });
+             }),
+          ]),
         ),
       ),
     );
