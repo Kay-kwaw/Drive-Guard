@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class CarDrivingWidget extends StatefulWidget {
   const CarDrivingWidget({Key? key}) : super(key: key);
@@ -80,24 +81,23 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
               height: 200,
               fit: BoxFit.cover,
             ),
-            Row(
+            const Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   '72',
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.getFont(
-                    'Lexend Deca',
-                    color: FlutterFlowTheme.of(context).dark400,
+                  style: TextStyle(
+                    color:Colors.black,
                     fontWeight: FontWeight.w100,
                     fontSize: 92,
                   ),
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 12),
+            const Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 12),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -105,30 +105,30 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                   Text(
                     'MPH',
                     textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.of(context).titleSmall.override(
+                    style: TextStyle(
                           fontFamily: 'Outfit',
-                          color: FlutterFlowTheme.of(context).grayLight,
+                          color: Colors.black,
                         ),
                   ),
                 ],
-              ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation1']!),
+              )
             ),
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 12),
+            const Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 12),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  AutoSizeText(
+                  Text(
                     'Battery Status',
                     textAlign: TextAlign.center,
-                    style: FlutterFlowTheme.of(context).titleSmall.override(
+                    style: TextStyle(
                           fontFamily: 'Outfit',
-                          color: FlutterFlowTheme.of(context).grayLight,
+                          color: Colors.black,
                         ),
                   ),
                 ],
-              ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation2']!),
+              )
             ),
             Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
@@ -138,8 +138,8 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                 lineHeight: 24,
                 animation: true,
                 animateFromLastPercent: true,
-                progressColor: FlutterFlowTheme.of(context).primary,
-                backgroundColor: FlutterFlowTheme.of(context).grayLighter,
+                progressColor: Colors.green,
+                backgroundColor: Colors.grey,
                 barRadius: const Radius.circular(40),
                 padding: EdgeInsets.zero,
               ),
@@ -150,23 +150,23 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Column(
+                  const Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                         child: Text(
                           'Charge',
-                          style: FlutterFlowTheme.of(context).bodySmall,
+                          style: TextStyle(),
                         ),
                       ),
                       Text(
                         '70%',
                         style:
-                            FlutterFlowTheme.of(context).displaySmall.override(
+                            TextStyle(
                                   fontFamily: 'Outfit',
-                                  color: FlutterFlowTheme.of(context).dark400,
+                                  color: Colors.black,
                                 ),
                       ),
                     ],
@@ -175,11 +175,11 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
+                      const Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                         child: Text(
                           'Range',
-                          style: FlutterFlowTheme.of(context).bodySmall,
+                          style: TextStyle(),
                         ),
                       ),
                       Text(
