@@ -16,18 +16,18 @@ class MyBottomNavigationBar extends StatelessWidget {
       onTap: onTap,
       items: const [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Home',
+          icon: Icon(Icons.home, color: Colors.white),
+          label: '',
           backgroundColor: Colors.white,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.online_prediction_rounded),
-          label: 'Order',
+          icon: Icon(Icons.online_prediction_rounded, color: Colors.white,),
+          label: '',
           backgroundColor: Colors.white
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.person),
-          label: 'Account',
+          icon: Icon(Icons.person, color: Colors.white,),
+          label: '',
           backgroundColor: Colors.white
         ),
       ],

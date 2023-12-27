@@ -1,5 +1,6 @@
 
 
+import 'package:drive_guard/views/Screens/Constants/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -20,7 +21,7 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor:Colors.white,
+      backgroundColor:kBackgroundColor,
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -30,10 +31,12 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Text(
-                    'Your Car',
-                    style: TextStyle(),
-                  ),
+                //  Text("Your car",
+                //   style: TextStyle(
+                //     color: kPrimaryColor,
+                //     fontSize: 18,
+                //   ),
+                //   )
                 ],
               ),
             ),
@@ -44,11 +47,12 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Elantra Model 42',
-                    style:TextStyle(
-                          fontFamily: 'Outfit',
-                          color: Colors.black,
-                        ),
+                      'Elantra Model 42',
+                      style: TextStyle(
+                            color:kPrimaryColor,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold
+                          ),
                   ),
                   Card(
                     clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -88,8 +92,8 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                   '72',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color:Colors.black,
-                    fontWeight: FontWeight.w100,
+                    color:kPrimaryColor,
+                    fontWeight: FontWeight.w300,
                     fontSize: 92,
                   ),
                 ),
@@ -106,7 +110,7 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                     textAlign: TextAlign.center,
                     style: TextStyle(
                           fontFamily: 'Outfit',
-                          color: Colors.black,
+                          color: kPrimaryColor,
                         ),
                   ),
                 ],
@@ -123,7 +127,7 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                     textAlign: TextAlign.center,
                     style: TextStyle(
                           fontFamily: 'Outfit',
-                          color: Colors.black,
+                          color: kPrimaryColor,
                         ),
                   ),
                 ],
@@ -137,8 +141,8 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                 lineHeight: 24,
                 animation: true,
                 animateFromLastPercent: true,
-                progressColor: Colors.green,
-                backgroundColor: Colors.grey,
+                progressColor: const Color.fromARGB(255, 58, 128, 1),
+                backgroundColor: Colors.grey.shade300,
                 barRadius: const Radius.circular(40),
                 padding: EdgeInsets.zero,
               ),
@@ -157,15 +161,18 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                         child: Text(
                           'Charge',
-                          style: TextStyle(),
+                          style: TextStyle(
+                            color: Colors.grey
+                          ),
                         ),
                       ),
                       Text(
                         '70%',
                         style:
                             TextStyle(
-                                  fontFamily: 'Outfit',
-                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                 fontSize: 20,
+                                 color: kPrimaryColor
                                 ),
                       ),
                     ],
@@ -178,15 +185,18 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                         child: Text(
                           'Range',
-                          style: TextStyle(),
+                          style: TextStyle(
+                            color: Colors.grey
+                          ),
                         ),
                       ),
                       Text(
                         '329m',
                         style:
                             TextStyle(
-                                  fontFamily: 'Outfit',
-                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                 fontSize: 20,
+                                 color: kPrimaryColor
                                 ),
                       ),
                     ],
@@ -199,15 +209,18 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                         child: Text(
                           'Status',
-                          style: TextStyle(),
+                          style: TextStyle(
+                            color: Colors.grey
+                          ),
                         ),
                       ),
                       Text(
                         'Good',
                         style:
                             TextStyle(
-                                  fontFamily: 'Outfit',
-                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                 fontSize: 20,
+                                 color: kPrimaryColor
                                 ),
                       ),
                     ],
@@ -247,7 +260,9 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                                     16, 8, 16, 24),
                                 child: Text(
                                   'Put your car in park in order to turn your car off.',
-                                  style:TextStyle(),
+                                  style:TextStyle(
+                                    color: Colors.grey
+                                  ),
                                 ),
                               ),
                             ],

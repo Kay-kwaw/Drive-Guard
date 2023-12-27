@@ -378,7 +378,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   ],
                 ),
               ),
-              const SizedBox(height: 20,),
+              const SizedBox(height: 40,),
              MyBottomNavigationBar(currentIndex: _currentIndex, onTap: (index) {
               setState(() {
                 _currentIndex = index;
