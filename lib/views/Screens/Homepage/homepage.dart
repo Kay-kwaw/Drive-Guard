@@ -1,5 +1,6 @@
 
 
+import 'package:drive_guard/views/Screens/Constants/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -15,34 +16,28 @@ class _HomePageWidgetState extends State<HomePageWidget>
 
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: const Color.fromARGB(255, 236, 236, 236),
+      backgroundColor: kBackgroundColor,
       body: SafeArea(
         top: true,
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              const Padding(
+               const Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(24, 16, 24, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Text(
-                      'Your Car',
-                      style: TextStyle(
-                        color: Colors.black,
-                      ),
-                    ),
+                  Text("Your car",
+                  style: TextStyle(
+                    color: kPrimaryColor,
+                    fontSize: 18,
+                  ),
+                  )
                   ],
                 ),
               ),
@@ -52,10 +47,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      'Fleet Model 42',
+                      'Elantra Model 42',
                       style: TextStyle(
-                            fontFamily: 'Outfit',
-                            color: Colors.black,
+                            color:kPrimaryColor,
                             fontSize: 20,
                             fontWeight: FontWeight.bold
                           ),
@@ -105,6 +99,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
+                            color: kPrimaryColor
                           ),
                         ),
                       ],
@@ -124,8 +119,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           '329m',
                           style: TextStyle(
                                  fontWeight: FontWeight.bold,
-                                 color: Colors.black,
                                  fontSize: 20,
+                                 color: kPrimaryColor
                               )
                         ),
                       ],
@@ -145,7 +140,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           'Good',
                           style: TextStyle(
                                  fontWeight: FontWeight.bold,
-                                 color: Colors.black,
+                                  color: kPrimaryColor,
                                  fontSize: 20,
                               ),
                         ),
@@ -203,7 +198,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Fleet Assistant',
+                                  'Car Assistant',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
                                     
@@ -254,7 +249,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       width: MediaQuery.sizeOf(context).width * 0.4,
                       height: 150,
                       decoration: BoxDecoration(
-                        color: Colors.black,
+                        color: const Color.fromARGB(255, 45, 45, 45),
                         boxShadow: const [
                           BoxShadow(
                             blurRadius: 4,
