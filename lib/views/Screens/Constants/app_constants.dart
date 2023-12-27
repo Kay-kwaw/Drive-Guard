@@ -1,6 +1,9 @@
 
 import 'package:flutter/material.dart';
-const Color kBackgroundColor =Colors.white;
+const Color kBackgroundColor =Colors.black;
+const Color kPrimaryColor = Colors.white;
+const Color kSecondaryColor = Color.fromARGB(255, 58, 128, 1);
+const Color kProgressbackground = Color(0xFFE0E0E0);
 
 
 final ThemeData kAppTheme = ThemeData(

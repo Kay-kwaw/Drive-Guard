@@ -24,7 +24,6 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const Padding(
               padding: EdgeInsetsDirectional.fromSTEB(24, 50, 24, 0),
@@ -45,7 +44,7 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Fleet Model 42',
+                    'Elantra Model 42',
                     style:TextStyle(
                           fontFamily: 'Outfit',
                           color: Colors.black,
@@ -76,7 +75,7 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
               ),
             ),
             Image.asset(
-              'assets/images/carFull@2x.png',
+             'assets/images/car_image.png',
               width: MediaQuery.sizeOf(context).width,
               height: 200,
               fit: BoxFit.cover,
@@ -144,13 +143,13 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                 padding: EdgeInsets.zero,
               ),
             ),
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 10),
+            const Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 10),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  const Column(
+                  Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -175,7 +174,7 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      const Padding(
+                      Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                         child: Text(
                           'Range',
@@ -185,14 +184,14 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                       Text(
                         '329m',
                         style:
-                            FlutterFlowTheme.of(context).displaySmall.override(
+                            TextStyle(
                                   fontFamily: 'Outfit',
-                                  color: FlutterFlowTheme.of(context).dark400,
+                                  color: Colors.black,
                                 ),
                       ),
                     ],
                   ),
-                  const Column(
+                  Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
