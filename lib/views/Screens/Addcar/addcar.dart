@@ -25,18 +25,98 @@ class _AddcarWdigetState extends State<AddcarWdiget> {
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Image.asset("assets/images/car_image.png"),
+              child: Image.asset("assets/images/car_image.png",
+              width: double.infinity,
+              height: 200,
+              ),
             ),
              Padding(
              padding: const EdgeInsets.all(8.0),
              child: ElevatedButton(
               onPressed: (){},
-              child: const Text("Upload a Photo", style: TextStyle(color: Colors.black),)),
+              child: const Text("Upload a Photo", 
+              style: TextStyle(color: Colors.black),)
+              ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    fillColor: Colors.black,
+                    filled: true,
+                    enabledBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                            color: Colors.white,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                    label: const Text("Car name"),
+                     ),
+                     
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    fillColor: Colors.black,
+                    filled: true,
+                    enabledBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                            color: Colors.white,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                    label: const Text("Color"),
+                     ),
+                     
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    fillColor: Colors.black,
+                    filled: true,
+                    enabledBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                            color: Colors.white,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                    label: const Text("Car Mileage"),
+                     ),
+                     
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    fillColor: Colors.black,
+                    filled: true,
+                    enabledBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                            color: Colors.white,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                    label: const Text("Default Temp"),
+                     ),
+                ),
+              ),
+               Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(onPressed: (){}, child: const Text("Confirm Changes",style: TextStyle(color: kBackgroundColor),)),
+
               )
           ],
         )
         ),
-
     );
   }
 }
