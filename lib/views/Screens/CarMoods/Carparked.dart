@@ -1,4 +1,6 @@
+import 'package:drive_guard/views/Screens/Constants/app_constants.dart';
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class Carparked extends StatefulWidget {
   const Carparked({super.key});
@@ -10,7 +12,7 @@ class Carparked extends StatefulWidget {
 class _CarparkedState extends State<Carparked> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
        backgroundColor:kBackgroundColor,
       body: SingleChildScrollView(
         child: Column(
@@ -79,7 +81,7 @@ class _CarparkedState extends State<Carparked> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '72',
+                  '0',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color:kPrimaryColor,
@@ -126,7 +128,7 @@ class _CarparkedState extends State<Carparked> {
             Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
               child: LinearPercentIndicator(
-                percent: 0.4,
+                percent: 0.1,
                 width: MediaQuery.sizeOf(context).width * 0.9,
                 lineHeight: 24,
                 animation: true,
@@ -249,7 +251,7 @@ class _CarparkedState extends State<Carparked> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     16, 8, 16, 24),
                                 child: Text(
-                                  'Put your car in park in order to turn your car off.',
+                                  'You can put the car off now',
                                   style:TextStyle(
                                     color: Colors.grey
                                   ),
@@ -267,7 +269,7 @@ class _CarparkedState extends State<Carparked> {
                       width: 80,
                       height: 80,
                       decoration: const BoxDecoration(
-                        color: Colors.black,
+                        color: Colors.red,
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 7,
