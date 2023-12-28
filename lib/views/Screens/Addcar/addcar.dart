@@ -1,3 +1,4 @@
+import 'package:drive_guard/views/Screens/Constants/app_constants.dart';
 import 'package:flutter/material.dart';
 
 class AddcarWdiget extends StatefulWidget {
@@ -12,8 +13,12 @@ class _AddcarWdigetState extends State<AddcarWdiget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
+        leading: const Icon(Icons.arrow_back, color: kPrimaryColor,),
+        backgroundColor: kBackgroundColor,
       ),
+      body: SafeArea(
+        top: true,
+        child: ),
 
     );
   }

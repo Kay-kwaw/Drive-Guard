@@ -1,3 +1,4 @@
+import 'package:drive_guard/views/Screens/Addcar/addcar.dart';
 import 'package:drive_guard/views/Screens/CarMoods/Cardriving.dart';
 import 'package:drive_guard/views/Screens/CarMoods/Carparked.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Carparked(),
+      home: AddcarWdiget(),
     );
   }
 }
