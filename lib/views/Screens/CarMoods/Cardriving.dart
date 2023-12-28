@@ -1,5 +1,6 @@
 
 
+import 'package:drive_guard/views/Screens/CarMoods/Carparked.dart';
 import 'package:drive_guard/views/Screens/Constants/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -14,7 +15,7 @@ class CarDrivingWidget extends StatefulWidget {
 
 class _CarDrivingWidgetState extends State<CarDrivingWidget>
     with TickerProviderStateMixin {
-      
+
   final scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
@@ -30,12 +31,6 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                //  Text("Your car",
-                //   style: TextStyle(
-                //     color: kPrimaryColor,
-                //     fontSize: 18,
-                //   ),
-                //   )
                 ],
               ),
             ),
@@ -61,9 +56,7 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                       borderRadius: BorderRadius.circular(40),
                     ),
                     child: IconButton(
-                      // borderColor: Colors.transparent,
-                      // borderRadius: 30,
-                      // buttonSize: 46,
+
                       icon: const Icon(
                         Icons.keyboard_arrow_down_rounded,
                         color: Colors.white,
@@ -227,7 +220,7 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                 ],
               ),
             ),
-            Container(
+            SizedBox(
               height: 200,
               child: Stack(
                 children: [
@@ -280,16 +273,24 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                         boxShadow: [
                           BoxShadow(
                             blurRadius: 7,
-                            color: Color(0x8E000000),
+                            color: Color.fromARGB(142, 255, 255, 255),
                             offset: Offset(0, 3),
                           )
                         ],
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(
-                        Icons.power_settings_new_rounded,
-                        color: Colors.white,
-                        size: 50,
+                      child:  InkWell(
+                        onTap: () {
+                          Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Carparked()),
+            );
+                        },
+                        child: const Icon(
+                          Icons.power_settings_new_rounded,
+                          color: Colors.white,
+                          size: 50,
+                        ),
                       ),
                     )
                   ),

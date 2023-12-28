@@ -1,3 +1,4 @@
+import 'package:drive_guard/views/Screens/CarMoods/Cardriving.dart';
 import 'package:drive_guard/views/Screens/Constants/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
@@ -279,10 +280,17 @@ class _CarparkedState extends State<Carparked> {
                         ],
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(
-                        Icons.power_settings_new_rounded,
-                        color: Colors.white,
-                        size: 50,
+                      child: InkWell(
+                        onTap: () => 
+                         Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const CarDrivingWidget()),
+            ),
+                        child: const Icon(
+                          Icons.power_settings_new_rounded,
+                          color: Colors.white,
+                          size: 50,
+                        ),
                       ),
                     )
                   ),
