@@ -1,6 +1,4 @@
-import 'package:drive_guard/views/Screens/Addcar/addcar.dart';
 import 'package:drive_guard/views/Screens/CarMoods/Cardriving.dart';
-import 'package:drive_guard/views/Screens/CarMoods/Carparked.dart';
 import 'package:flutter/material.dart';
 
 void main() {

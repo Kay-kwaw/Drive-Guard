@@ -41,7 +41,7 @@ class _CarDrivingWidgetState extends State<CarDrivingWidget>
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                      'Elantra Model 42',
+                      'Hyundai Elantra',
                       style: TextStyle(
                             color:kPrimaryColor,
                             fontSize: 20,
