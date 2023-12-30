@@ -17,36 +17,24 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     {
       'title': 'Add Cars',
       'subtitle': 'We are here to help you',
-      'image': 'assets/images/electric_car.png',
+      'image': 'assets/images/electric_car-removebg-preview.png',
     },
     {
       'title': 'Full Control',
       'subtitle': 'Explore the features of our App',
-      'image': 'assets/images/undraw_Speed_test_re_pe1f.png',
+      'image': 'assets/images/undraw_Speed_test_re_pe1f-removebg-preview.png',
     },
     {
       'title': 'Keep Track of your Car',
       'subtitle': 'Get started with our App and enjoy the ride',
-      'image': 'assets/images/location_image.png',
+      'image': 'assets/images/location_image-removebg-preview.png',
     }
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kBackgroundColor,
-     body: Column(
-      mainAxisSize: MainAxisSize.max,
-       children: [
-        const Padding(
-          padding: EdgeInsets.all(30.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Image(image: AssetImage('assets/images/Logo-2.png'), height: 100, width: 50,),
-            ],
-          
-          ),
-        ),
+     body: 
          SafeArea(
            child: Center(
              child: CarouselSlider(
@@ -72,6 +60,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             style: const TextStyle(
                               fontSize: 20.0,
                               fontWeight: FontWeight.bold,
+                              color: kPrimaryColor
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -80,6 +69,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             style: const TextStyle(
                               fontSize: 14.0,
                               fontWeight: FontWeight.normal,
+                              color: kPrimaryColor
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -131,12 +121,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
              ),
            ),
-         ),
-          const SizedBox(height: 20,),
-         
-       
-       ],
-     ),  
+         ), 
     );
   }
 }
