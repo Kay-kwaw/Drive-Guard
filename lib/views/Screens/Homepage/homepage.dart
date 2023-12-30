@@ -1,5 +1,6 @@
 
 
+import 'package:drive_guard/views/Screens/CarMoods/Cardriving.dart';
 import 'package:drive_guard/views/Screens/Constants/app_constants.dart';
 import 'package:drive_guard/views/Screens/Constants/nav_bar.dart';
 import 'package:flutter/material.dart';
@@ -39,6 +40,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   style: TextStyle(
                     color: kPrimaryColor,
                     fontSize: 18,
+                    fontFamily: AppFonts.Montserrat
                   ),
                   )
                   ],
@@ -50,11 +52,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      'Elantra Model 42',
+                      'Hyundai Elantra',
                       style: TextStyle(
                             color:kPrimaryColor,
                             fontSize: 20,
-                            fontWeight: FontWeight.bold
+                            fontWeight: FontWeight.bold,
+                            fontFamily: AppFonts.Montserrat
                           ),
                     ),
                   ],
@@ -333,11 +336,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                         ],
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: const Column(
+                      child:  Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Padding(
+                          const Padding(
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
                             child: Icon(
@@ -346,7 +349,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               size: 44,
                             ),
                           ),
-                          Padding(
+                          const Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                             child: Text(
                               'Car Charging',
@@ -361,13 +364,21 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           Expanded(
                             child: Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(8, 4, 8, 0),
-                              child: Text(
-                                'Current Status\n30m until full',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Color(0xB3FFFFFF),
-                                  fontSize: 12,
+                                  const EdgeInsetsDirectional.fromSTEB(8, 4, 8, 0),
+                              child: InkWell(
+                                onTap: () {
+                                    Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CarDrivingWidget()),
+            );
+                                },
+                                child: const Text(
+                                  'Current Status\n30m until full',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Color(0xB3FFFFFF),
+                                    fontSize: 12,
+                                  ),
                                 ),
                               ),
                             ),
@@ -378,7 +389,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   ],
                 ),
               ),
-              const SizedBox(height: 40,),
+              const SizedBox(height: 50,),
              MyBottomNavigationBar(currentIndex: _currentIndex, onTap: (index) {
               setState(() {
                 _currentIndex = index;
