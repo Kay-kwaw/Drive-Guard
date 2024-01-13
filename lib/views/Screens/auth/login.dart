@@ -706,8 +706,7 @@ class _AuthWidgetState extends State<AuthWidget>
                                                     ),
                                                   ),
                                                 ],
-                                              ).animateOnPageLoad(animationsMap[
-                                                  'columnOnPageLoadAnimation1']!),
+                                              )
                                             ),
                                           ),
                                           Align(
@@ -774,10 +773,6 @@ class _AuthWidgetState extends State<AuthWidget>
                                                     padding: const EdgeInsetsDirectional
                                                         .fromSTEB(8, 0, 8, 16),
                                                     child: TextFormField(
-                                                      controller: _model
-                                                          .emailAddressCreateController,
-                                                      focusNode: _model
-                                                          .emailAddressCreateFocusNode,
                                                       textCapitalization:
                                                           TextCapitalization
                                                               .sentences,
@@ -872,24 +867,16 @@ class _AuthWidgetState extends State<AuthWidget>
                                                             fontWeight:
                                                                 FontWeight.w500,
                                                           ),
-                                                      validator: _model
-                                                          .emailAddressCreateControllerValidator
-                                                          .asValidator(context),
                                                     ),
                                                   ),
                                                   Padding(
                                                     padding: const EdgeInsetsDirectional
                                                         .fromSTEB(8, 0, 8, 16),
                                                     child: TextFormField(
-                                                      controller: _model
-                                                          .passwordCreateController,
-                                                      focusNode: _model
-                                                          .passwordCreateFocusNode,
                                                       textCapitalization:
                                                           TextCapitalization
                                                               .sentences,
-                                                      obscureText: !_model
-                                                          .passwordCreateVisibility,
+                                                      obscureText:false,
                                                       decoration: InputDecoration(
                                                         labelText: 'Password',
                                                         labelStyle:
@@ -968,25 +955,25 @@ class _AuthWidgetState extends State<AuthWidget>
                                                         fillColor:
                                                             const Color(0xCCFFFFFF),
                                                         suffixIcon: InkWell(
-                                                          onTap: () => setState(
-                                                            () => _model
-                                                                    .passwordCreateVisibility =
-                                                                !_model
-                                                                    .passwordCreateVisibility,
-                                                          ),
-                                                          focusNode: FocusNode(
-                                                              skipTraversal:
-                                                                  true),
-                                                          child: Icon(
-                                                            _model.passwordCreateVisibility
-                                                                ? Icons
-                                                                    .visibility_outlined
-                                                                : Icons
-                                                                    .visibility_off_outlined,
-                                                            color:
-                                                                const Color(0xFF57636C),
-                                                            size: 24,
-                                                          ),
+                                                          // onTap: () => setState(
+                                                          //   () => _model
+                                                          //           .passwordCreateVisibility =
+                                                        
+                                                          //           .passwordCreateVisibility,
+                                                          // ),
+                                                          // focusNode: FocusNode(
+                                                          //     skipTraversal:
+                                                          //         true),
+                                                          // child: Icon(
+                                                          //   _model.passwordCreateVisibility
+                                                          //       ? Icons
+                                                          //           .visibility_outlined
+                                                          //       : Icons
+                                                          //           .visibility_off_outlined,
+                                                          //   color:
+                                                          //       const Color(0xFF57636C),
+                                                          //   size: 24,
+                                                          // ),
                                                         ),
                                                       ),
                                                       style: FlutterFlowTheme.of(
@@ -1001,9 +988,6 @@ class _AuthWidgetState extends State<AuthWidget>
                                                             fontWeight:
                                                                 FontWeight.w500,
                                                           ),
-                                                      validator: _model
-                                                          .passwordCreateControllerValidator
-                                                          .asValidator(context),
                                                     ),
                                                   ),
                                                   Align(
@@ -1017,27 +1001,7 @@ class _AuthWidgetState extends State<AuthWidget>
                                                                   0, 0, 0, 16),
                                                       child: FFButtonWidget(
                                                         onPressed: () async {
-                                                          GoRouter.of(context)
-                                                              .prepareAuthEvent();
-        
-                                                          final user =
-                                                              await authManager
-                                                                  .signInWithEmail(
-                                                            context,
-                                                            _model
-                                                                .emailAddressCreateController
-                                                                .text,
-                                                            _model
-                                                                .passwordCreateController
-                                                                .text,
-                                                          );
-                                                          if (user == null) {
-                                                            return;
-                                                          }
-        
-                                                          context.goNamedAuth(
-                                                              'homePage',
-                                                              context.mounted);
+                                                         
                                                         },
                                                         text: 'Sign Up',
                                                         options: FFButtonOptions(
