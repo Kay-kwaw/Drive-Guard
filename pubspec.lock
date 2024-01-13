@@ -113,6 +113,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  dynamic_fa_icons:
+    dependency: "direct main"
+    description:
+      name: dynamic_fa_icons
+      sha256: cdf136db6a3d91c4304e52cc44242a5d642449af3f035e3c28bf90e4962df0a3
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0+1"
   emoji_flag_converter:
     dependency: transitive
     description:

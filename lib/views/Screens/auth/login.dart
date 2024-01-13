@@ -129,7 +129,6 @@ class _AuthWidgetState extends State<AuthWidget>
                                             text: 'Sign Up',
                                           ),
                                         ],
-                                        controller:tabBarController,
                                         onTap: (i) async {
                                           [() async {}, () async {}][i]();
                                         },
@@ -137,7 +136,6 @@ class _AuthWidgetState extends State<AuthWidget>
                                     ),
                                     Expanded(
                                       child: TabBarView(
-                                        controller: _model.tabBarController,
                                         children: [
                                           Align(
                                             alignment:
@@ -396,27 +394,27 @@ class _AuthWidgetState extends State<AuthWidget>
                                                         filled: true,
                                                         fillColor:
                                                             const Color(0xCCFFFFFF),
-                                                        suffixIcon: InkWell(
-                                                          onTap: () => setState(
-                                                            () => _model
-                                                                    .passwordVisibility =
-                                                                !_model
-                                                                    .passwordVisibility,
-                                                          ),
-                                                          focusNode: FocusNode(
-                                                              skipTraversal:
-                                                                  true),
-                                                          child: Icon(
-                                                            _model.passwordVisibility
-                                                                ? Icons
-                                                                    .visibility_outlined
-                                                                : Icons
-                                                                    .visibility_off_outlined,
-                                                            color:
-                                                                const Color(0xFF57636C),
-                                                            size: 20,
-                                                          ),
-                                                        ),
+                                                        // suffixIcon: InkWell(
+                                                        //   onTap: () => setState(
+                                                        //     () => _model
+                                                        //             .passwordVisibility =
+                                                        //         !_model
+                                                        //             .passwordVisibility,
+                                                        //   ),
+                                                        //   focusNode: FocusNode(
+                                                        //       skipTraversal:
+                                                        //           true),
+                                                        //   child: Icon(
+                                                        //     _model.passwordVisibility
+                                                        //         ? Icons
+                                                        //             .visibility_outlined
+                                                        //         : Icons
+                                                        //             .visibility_off_outlined,
+                                                        //     color:
+                                                        //         const Color(0xFF57636C),
+                                                        //     size: 20,
+                                                        //   ),
+                                                        // ),
                                                       ),
                                                       style: FlutterFlowTheme.of(
                                                               context)
@@ -430,9 +428,7 @@ class _AuthWidgetState extends State<AuthWidget>
                                                             fontWeight:
                                                                 FontWeight.w500,
                                                           ),
-                                                      validator: _model
-                                                          .passwordControllerValidator
-                                                          .asValidator(context),
+
                                                     ),
                                                   ),
                                                   Align(
@@ -444,68 +440,11 @@ class _AuthWidgetState extends State<AuthWidget>
                                                           const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0, 0, 0, 16),
-                                                      child: FFButtonWidget(
+                                                      child: OutlinedButton(
                                                         onPressed: () async {
-                                                          GoRouter.of(context)
-                                                              .prepareAuthEvent();
-        
-                                                          final user =
-                                                              await authManager
-                                                                  .signInWithEmail(
-                                                            context,
-                                                            _model
-                                                                .emailAddressController
-                                                                .text,
-                                                            _model
-                                                                .passwordController
-                                                                .text,
-                                                          );
-                                                          if (user == null) {
-                                                            return;
-                                                          }
-        
-                                                          context.goNamedAuth(
-                                                              'homePage',
-                                                              context.mounted);
+                                                        
                                                         },
-                                                        text: 'Get Started',
-                                                        options: FFButtonOptions(
-                                                          width: 230,
-                                                          height: 52,
-                                                          padding:
-                                                              const EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0, 0, 0, 0),
-                                                          iconPadding:
-                                                              const EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0, 0, 0, 0),
-                                                          color:
-                                                              const Color(0xFF4B39EF),
-                                                          textStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .titleSmall
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Plus Jakarta Sans',
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontSize: 16,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .w500,
-                                                                  ),
-                                                          elevation: 3,
-                                                          borderSide: const BorderSide(
-                                                            color: Colors
-                                                                .transparent,
-                                                            width: 1,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(40),
-                                                        ),
+                                                       child: Text("Sign Up"),
                                                       ),
                                                     ),
                                                   ),
@@ -576,22 +515,7 @@ class _AuthWidgetState extends State<AuthWidget>
                                                                   FFButtonWidget(
                                                                 onPressed:
                                                                     () async {
-                                                                  GoRouter.of(
-                                                                          context)
-                                                                      .prepareAuthEvent();
-                                                                  final user =
-                                                                      await authManager
-                                                                          .signInWithGoogle(
-                                                                              context);
-                                                                  if (user ==
-                                                                      null) {
-                                                                    return;
-                                                                  }
-        
-                                                                  context.goNamedAuth(
-                                                                      'homePage',
-                                                                      context
-                                                                          .mounted);
+                                                                
                                                                 },
                                                                 text:
                                                                     'Continue with Google',
@@ -663,21 +587,6 @@ class _AuthWidgetState extends State<AuthWidget>
                                                                         FFButtonWidget(
                                                                       onPressed:
                                                                           () async {
-                                                                        GoRouter.of(
-                                                                                context)
-                                                                            .prepareAuthEvent();
-                                                                        final user =
-                                                                            await authManager
-                                                                                .signInWithApple(context);
-                                                                        if (user ==
-                                                                            null) {
-                                                                          return;
-                                                                        }
-        
-                                                                        context.goNamedAuth(
-                                                                            'homePage',
-                                                                            context
-                                                                                .mounted);
                                                                       },
                                                                       text:
                                                                           'Continue with Apple',
@@ -754,19 +663,7 @@ class _AuthWidgetState extends State<AuthWidget>
                                                                   0, 0, 0, 16),
                                                       child: FFButtonWidget(
                                                         onPressed: () async {
-                                                          GoRouter.of(context)
-                                                              .prepareAuthEvent();
-                                                          final user =
-                                                              await authManager
-                                                                  .signInWithGoogle(
-                                                                      context);
-                                                          if (user == null) {
-                                                            return;
-                                                          }
-        
-                                                          context.goNamedAuth(
-                                                              'homePage',
-                                                              context.mounted);
+                                                         
                                                         },
                                                         text: 'Forgot Password?',
                                                         options: FFButtonOptions(
