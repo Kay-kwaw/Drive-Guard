@@ -45,7 +45,7 @@ class _AuthWidgetState extends State<AuthWidget>
                     child: Padding(
                       padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 72),
                       child: Text(
-                        'brand.ai',
+                        'Drive_Guard',
                         style: FlutterFlowTheme.of(context).displaySmall.override(
                               fontFamily: 'Plus Jakarta Sans',
                               color: const Color(0xFF101213),
