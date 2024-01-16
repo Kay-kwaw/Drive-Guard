@@ -308,15 +308,9 @@ class _AuthWidgetState extends State<AuthWidget>
                                                     padding: const EdgeInsetsDirectional
                                                         .fromSTEB(8, 0, 8, 16),
                                                     child: TextFormField(
-                                                      controller: _model
-                                                          .passwordController,
-                                                      focusNode: _model
-                                                          .passwordFocusNode,
-                                                      textCapitalization:
-                                                          TextCapitalization
-                                                              .sentences,
-                                                      obscureText: !_model
-                                                          .passwordVisibility,
+                                                     
+                                                      
+                                                      obscureTex: false,
                                                       decoration: InputDecoration(
                                                         labelText: 'Password',
                                                         labelStyle:
@@ -519,11 +513,11 @@ class _AuthWidgetState extends State<AuthWidget>
                                                                 },
                                                                 text:
                                                                     'Continue with Google',
-                                                                icon: FaIcon(
-                                                                  FontAwesomeIcons
-                                                                      .google,
-                                                                  size: 20,
-                                                                ),
+                                                                // icon: FaIcon(
+                                                                //   FontAwesomeIcons
+                                                                //       .google,
+                                                                //   size: 20,
+                                                                // ),
                                                                 options:
                                                                     FFButtonOptions(
                                                                   width: 230,
@@ -590,12 +584,12 @@ class _AuthWidgetState extends State<AuthWidget>
                                                                       },
                                                                       text:
                                                                           'Continue with Apple',
-                                                                      icon:
-                                                                          FaIcon(
-                                                                        FontAwesomeIcons
-                                                                            .apple,
-                                                                        size: 20,
-                                                                      ),
+                                                                      // icon:
+                                                                      //     FaIcon(
+                                                                      //   FontAwesomeIcons
+                                                                      //       .apple,
+                                                                      //   size: 20,
+                                                                      // ),
                                                                       options:
                                                                           FFButtonOptions(
                                                                         width:
@@ -1096,78 +1090,12 @@ class _AuthWidgetState extends State<AuthWidget>
                                                               const EdgeInsetsDirectional
                                                                   .fromSTEB(0, 0,
                                                                       0, 16),
-                                                          child: FFButtonWidget(
+                                                          child: OutlinedButton(
                                                             onPressed: () async {
-                                                              GoRouter.of(context)
-                                                                  .prepareAuthEvent();
-                                                              final user =
-                                                                  await authManager
-                                                                      .signInWithGoogle(
-                                                                          context);
-                                                              if (user == null) {
-                                                                return;
-                                                              }
-        
-                                                              context.goNamedAuth(
-                                                                  'homePage',
-                                                                  context
-                                                                      .mounted);
+
                                                             },
-                                                            text:
-                                                                'Continue with Google',
-                                                            icon: FaIcon(
-                                                              FontAwesomeIcons
-                                                                  .google,
-                                                              size: 20,
-                                                            ),
-                                                            options:
-                                                                FFButtonOptions(
-                                                              width: 230,
-                                                              height: 44,
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0,
-                                                                          0,
-                                                                          0,
-                                                                          0),
-                                                              iconPadding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0,
-                                                                          0,
-                                                                          0,
-                                                                          0),
-                                                              color: Colors.white,
-                                                              textStyle:
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Plus Jakarta Sans',
-                                                                        color: const Color(
-                                                                            0xFF101213),
-                                                                        fontSize:
-                                                                            14,
-                                                                        fontWeight:
-                                                                            FontWeight
-                                                                                .bold,
-                                                                      ),
-                                                              elevation: 0,
-                                                              borderSide:
-                                                                  const BorderSide(
-                                                                color: Color(
-                                                                    0xFFE0E3E7),
-                                                                width: 2,
-                                                              ),
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          40),
-                                                              hoverColor: const Color(
-                                                                  0xFFF1F4F8),
-                                                            ),
+                                                            child: Text("Hiiii"),
+                                                              
                                                           ),
                                                         ),
                                                         isAndroid
@@ -1181,87 +1109,18 @@ class _AuthWidgetState extends State<AuthWidget>
                                                                             0,
                                                                             16),
                                                                 child:
-                                                                    FFButtonWidget(
+                                                                    OutlinedButton(
                                                                   onPressed:
                                                                       () async {
-                                                                    GoRouter.of(
-                                                                            context)
-                                                                        .prepareAuthEvent();
-                                                                    final user =
-                                                                        await authManager
-                                                                            .signInWithApple(
-                                                                                context);
-                                                                    if (user ==
-                                                                        null) {
-                                                                      return;
-                                                                    }
-        
-                                                                    context.goNamedAuth(
-                                                                        'homePage',
-                                                                        context
-                                                                            .mounted);
-                                                                  },
-                                                                  text:
-                                                                      'Continue with Apple',
-                                                                  icon: FaIcon(
-                                                                    FontAwesomeIcons
-                                                                        .apple,
-                                                                    size: 20,
-                                                                  ),
-                                                                  options:
-                                                                      FFButtonOptions(
-                                                                    width: 230,
-                                                                    height: 44,
-                                                                    padding: const EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0,
-                                                                            0,
-                                                                            0,
-                                                                            0),
-                                                                    iconPadding:
-                                                                        const EdgeInsetsDirectional
-                                                                            .fromSTEB(
-                                                                                0,
-                                                                                0,
-                                                                                0,
-                                                                                0),
-                                                                    color: Colors
-                                                                        .white,
-                                                                    textStyle: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Plus Jakarta Sans',
-                                                                          color: const Color(
-                                                                              0xFF101213),
-                                                                          fontSize:
-                                                                              14,
-                                                                          fontWeight:
-                                                                              FontWeight.bold,
-                                                                        ),
-                                                                    elevation: 0,
-                                                                    borderSide:
-                                                                        const BorderSide(
-                                                                      color: Color(
-                                                                          0xFFE0E3E7),
-                                                                      width: 2,
-                                                                    ),
-                                                                    borderRadius:
-                                                                        BorderRadius
-                                                                            .circular(
-                                                                                40),
-                                                                    hoverColor: const Color(
-                                                                        0xFFF1F4F8),
+                                                                      },
+                                                                      child: Text("Hii")
                                                                   ),
                                                                 ),
-                                                              ),
                                                       ],
                                                     ),
                                                   ),
                                                 ],
-                                              ).animateOnPageLoad(animationsMap[
-                                                  'columnOnPageLoadAnimation2']!),
+                                              )
                                             ),
                                           ),
                                         ],
@@ -1270,8 +1129,7 @@ class _AuthWidgetState extends State<AuthWidget>
                                   ],
                                 ),
                               ),
-                            ).animateOnPageLoad(
-                                animationsMap['containerOnPageLoadAnimation']!),
+                            )
                           ),
                         ],
                       ),
