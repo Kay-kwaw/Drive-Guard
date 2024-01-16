@@ -201,10 +201,6 @@ class _AuthWidgetState extends State<AuthWidget>
                                                     padding: const EdgeInsetsDirectional
                                                         .fromSTEB(8, 0, 8, 16),
                                                     child: TextFormField(
-                                                      controller: _model
-                                                          .emailAddressController,
-                                                      focusNode: _model
-                                                          .emailAddressFocusNode,
                                                       textCapitalization:
                                                           TextCapitalization
                                                               .sentences,
@@ -250,39 +246,6 @@ class _AuthWidgetState extends State<AuthWidget>
                                                               BorderRadius
                                                                   .circular(8),
                                                         ),
-                                                        focusedBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide: const BorderSide(
-                                                            color:
-                                                                Color(0xFF4B39EF),
-                                                            width: 2,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(8),
-                                                        ),
-                                                        errorBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide: const BorderSide(
-                                                            color:
-                                                                Color(0xFFFF5963),
-                                                            width: 2,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(8),
-                                                        ),
-                                                        focusedErrorBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide: const BorderSide(
-                                                            color:
-                                                                Color(0xFFFF5963),
-                                                            width: 2,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(8),
-                                                        ),
                                                         filled: true,
                                                         fillColor:
                                                             const Color(0xCCFFFFFF),
@@ -299,18 +262,12 @@ class _AuthWidgetState extends State<AuthWidget>
                                                             fontWeight:
                                                                 FontWeight.w500,
                                                           ),
-                                                      validator: _model
-                                                          .emailAddressControllerValidator
-                                                          .asValidator(context),
                                                     ),
                                                   ),
                                                   Padding(
                                                     padding: const EdgeInsetsDirectional
                                                         .fromSTEB(8, 0, 8, 16),
                                                     child: TextFormField(
-                                                     
-                                                      
-                                                      obscureTex: false,
                                                       decoration: InputDecoration(
                                                         labelText: 'Password',
                                                         labelStyle:
@@ -352,63 +309,9 @@ class _AuthWidgetState extends State<AuthWidget>
                                                               BorderRadius
                                                                   .circular(8),
                                                         ),
-                                                        focusedBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide: const BorderSide(
-                                                            color:
-                                                                Color(0xFF4B39EF),
-                                                            width: 2,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(8),
-                                                        ),
-                                                        errorBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide: const BorderSide(
-                                                            color:
-                                                                Color(0xFFFF5963),
-                                                            width: 2,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(8),
-                                                        ),
-                                                        focusedErrorBorder:
-                                                            OutlineInputBorder(
-                                                          borderSide: const BorderSide(
-                                                            color:
-                                                                Color(0xFFFF5963),
-                                                            width: 2,
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(8),
-                                                        ),
                                                         filled: true,
                                                         fillColor:
                                                             const Color(0xCCFFFFFF),
-                                                        // suffixIcon: InkWell(
-                                                        //   onTap: () => setState(
-                                                        //     () => _model
-                                                        //             .passwordVisibility =
-                                                        //         !_model
-                                                        //             .passwordVisibility,
-                                                        //   ),
-                                                        //   focusNode: FocusNode(
-                                                        //       skipTraversal:
-                                                        //           true),
-                                                        //   child: Icon(
-                                                        //     _model.passwordVisibility
-                                                        //         ? Icons
-                                                        //             .visibility_outlined
-                                                        //         : Icons
-                                                        //             .visibility_off_outlined,
-                                                        //     color:
-                                                        //         const Color(0xFF57636C),
-                                                        //     size: 20,
-                                                        //   ),
-                                                        // ),
                                                       ),
                                                       style: FlutterFlowTheme.of(
                                                               context)
