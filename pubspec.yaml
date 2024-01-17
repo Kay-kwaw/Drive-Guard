@@ -43,6 +43,7 @@ dependencies:
   dynamic_fa_icons: ^1.0.0+1
   animations: ^2.0.11
   animate_do: ^3.1.2
+  lottie: ^3.0.0
 
 dev_dependencies:
   flutter_test:
