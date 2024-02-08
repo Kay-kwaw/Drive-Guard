@@ -1,14 +1,19 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutterflow_ui/flutterflow_ui.dart';
 
 class AppointmentDetailsWidget extends StatefulWidget {
   const AppointmentDetailsWidget({
     super.key,
-    this.appointmentRef,
+  
   });
+  
+  get appointmentRef => null;
 
-  final CarAppointmentsRecord? appointmentRef;
+  
 
   @override
   State<AppointmentDetailsWidget> createState() =>
@@ -17,7 +22,7 @@ class AppointmentDetailsWidget extends StatefulWidget {
 
 class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
     with TickerProviderStateMixin {
-  late AppointmentDetailsModel _model;
+  
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -36,8 +41,8 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(-100, 0),
-          end: Offset(0, 0),
+          begin: const Offset(-100, 0),
+          end: const Offset(0, 0),
         ),
       ],
     ),
@@ -55,8 +60,8 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(-90, 0),
-          end: Offset(0, 0),
+          begin: const Offset(-90, 0),
+          end: const Offset(0, 0),
         ),
       ],
     ),
@@ -74,15 +79,15 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0, 70),
-          end: Offset(0, 0),
+          begin: const Offset(0, 70),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.95, 0),
-          end: Offset(1, 1),
+          begin: const Offset(0.95, 0),
+          end: const Offset(1, 1),
         ),
       ],
     ),
@@ -100,8 +105,8 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(-100, 0),
-          end: Offset(0, 0),
+          begin: const Offset(-100, 0),
+          end: const Offset(0, 0),
         ),
       ],
     ),
@@ -119,8 +124,8 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(-100, 0),
-          end: Offset(0, 0),
+          begin: const Offset(-100, 0),
+          end: const Offset(0, 0),
         ),
       ],
     ),
@@ -138,15 +143,15 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0, 70),
-          end: Offset(0, 0),
+          begin: const Offset(0, 70),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.9, 0),
-          end: Offset(1, 1),
+          begin: const Offset(0.9, 0),
+          end: const Offset(1, 1),
         ),
       ],
     ),
@@ -164,15 +169,15 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0, 80),
-          end: Offset(0, 0),
+          begin: const Offset(0, 80),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.9, 0),
-          end: Offset(1, 1),
+          begin: const Offset(0.9, 0),
+          end: const Offset(1, 1),
         ),
       ],
     ),
@@ -190,15 +195,15 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0, 90),
-          end: Offset(0, 0),
+          begin: const Offset(0, 90),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.9, 0),
-          end: Offset(1, 1),
+          begin: const Offset(0.9, 0),
+          end: const Offset(1, 1),
         ),
       ],
     ),
@@ -216,15 +221,15 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0, 100),
-          end: Offset(0, 0),
+          begin: const Offset(0, 100),
+          end: const Offset(0, 0),
         ),
         ScaleEffect(
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.9, 0),
-          end: Offset(1, 1),
+          begin: const Offset(0.9, 0),
+          end: const Offset(1, 1),
         ),
       ],
     ),
@@ -242,8 +247,8 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0, 110),
-          end: Offset(0, 0),
+          begin: const Offset(0, 110),
+          end: const Offset(0, 0),
         ),
       ],
     ),
@@ -261,8 +266,8 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(-70, 0),
-          end: Offset(0, 0),
+          begin: const Offset(-70, 0),
+          end: const Offset(0, 0),
         ),
       ],
     ),
@@ -271,7 +276,6 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => AppointmentDetailsModel());
 
     setupAnimations(
       animationsMap.values.where((anim) =>
@@ -279,13 +283,6 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
           !anim.applyInitialState),
       this,
     );
-  }
-
-  @override
-  void dispose() {
-    _model.dispose();
-
-    super.dispose();
   }
 
   @override
@@ -300,35 +297,33 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
     }
 
     return GestureDetector(
-      onTap: () => _model.unfocusNode.canRequestFocus
-          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
-          : FocusScope.of(context).unfocus(),
+
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100),
+          preferredSize: const Size.fromHeight(100),
           child: AppBar(
             backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
             automaticallyImplyLeading: false,
-            actions: [],
+            actions: const [],
             flexibleSpace: FlexibleSpaceBar(
               title: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 14),
+                padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 14),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
+                      padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
+                                const EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
                             child: FlutterFlowIconButton(
                               borderColor: Colors.transparent,
                               borderRadius: 30,
@@ -344,35 +339,35 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                               },
                             ),
                           ),
-                          Expanded(
+                          const Expanded(
                             child: Padding(
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(4, 0, 16, 0),
-                              child: Text(
-                                formatNumber(
-                                  widget.appointmentRef!.appointmentNumber,
-                                  formatType: FormatType.decimal,
-                                  decimalType: DecimalType.automatic,
-                                  currency: '#',
-                                ),
-                                textAlign: TextAlign.end,
-                                style: FlutterFlowTheme.of(context)
-                                    .headlineMedium
-                                    .override(
-                                      fontFamily: 'Outfit',
-                                      fontSize: 16,
-                                    ),
-                              ),
+                              // child: Text(
+                              //   // formatNumber(
+                              //   //   widget.appointmentRef!.price,
+                              //   //   formatType: FormatType.decimal,
+                              //   //   decimalType: DecimalType.automatic,
+                              //   //   currency: '#',
+                              //   // ),
+                              //   // textAlign: TextAlign.end,
+                              //   // style: FlutterFlowTheme.of(context)
+                              //   //     .headlineMedium
+                              //   //     .override(
+                              //   //       fontFamily: 'Outfit',
+                              //   //       fontSize: 16,
+                              //   //     ),
+                              // ),
                             ),
                           ),
                         ],
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(24, 0, 0, 0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 0, 0),
                       child: Text(
-                        widget.appointmentRef!.carName,
-                        style: FlutterFlowTheme.of(context).headlineMedium,
+                        Text("Appointment Details") as String,
+                       
                       ).animateOnPageLoad(
                           animationsMap['textOnPageLoadAnimation5']!),
                     ),
@@ -401,14 +396,14 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 4,
                                 color: Color(0x2B202529),
                                 offset: Offset(0, 2),
                               )
                             ],
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(16),
                               bottomRight: Radius.circular(16),
                               topLeft: Radius.circular(0),
@@ -417,7 +412,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 12),
+                          padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 12),
                           child: FutureBuilder<ProductNameRecord>(
                             future: ProductNameRecord.getDocumentOnce(
                                 widget.appointmentRef!.carRef!),
@@ -442,14 +437,14 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24, 0, 16, 0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0, 0, 4, 0),
                                           child: Text(
                                             widget.appointmentRef!.status,
@@ -468,15 +463,16 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16, 0, 16, 0),
-                                    child: CachedNetworkImage(
-                                      fadeInDuration:
-                                          Duration(milliseconds: 500),
-                                      fadeOutDuration:
-                                          Duration(milliseconds: 500),
-                                      imageUrl:
-                                          columnProductNameRecord.productImage,
+                                    child: Image.asset(
+                                      "assets/images/car_image.png",
+                                      // fadeInDuration:
+                                      //     const Duration(milliseconds: 500),
+                                      // fadeOutDuration:
+                                      //     const Duration(milliseconds: 500),
+                                      // imageUrl:
+                                      //     columnProductNameRecord.productImage,
                                       width: double.infinity,
                                       height: 210,
                                       fit: BoxFit.cover,
@@ -484,7 +480,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                         'imageOnPageLoadAnimation']!),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24, 0, 4, 4),
                                     child: Text(
                                       'Description',
@@ -494,14 +490,14 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                         'textOnPageLoadAnimation3']!),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         24, 0, 4, 0),
-                                    child: Text(
-                                      widget.appointmentRef!.description,
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleSmall,
-                                    ).animateOnPageLoad(animationsMap[
-                                        'textOnPageLoadAnimation4']!),
+                                    // child: Text(
+                                    //   columnProductNameRecord.productDescription,
+                                    //   style: FlutterFlowTheme.of(context)
+                                    //       .titleSmall,
+                                    // ).animateOnPageLoad(animationsMap[
+                                    //     'textOnPageLoadAnimation4']!),
                                   ),
                                 ],
                               );
@@ -525,14 +521,14 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                     .primaryBackground,
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12, 12, 12, 0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0, 4, 0, 0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -547,7 +543,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                               shape: BoxShape.circle,
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsets.all(8),
+                                              padding: const EdgeInsets.all(8),
                                               child: Icon(
                                                 Icons.access_time_rounded,
                                                 color:
@@ -571,7 +567,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12, 0, 0, 0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -591,7 +587,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                                       .bodySmall,
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0, 4, 0, 0),
                                               child: Text(
                                                 'Your car has been complete you may now go and pay for your service at the counter.',
@@ -620,7 +616,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                     .primaryBackground,
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12, 0, 12, 0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -638,7 +634,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                             shape: BoxShape.circle,
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(8),
+                                            padding: const EdgeInsets.all(8),
                                             child: Icon(
                                               Icons.access_time_rounded,
                                               color:
@@ -660,7 +656,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12, 0, 0, 0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -680,7 +676,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                                       .bodySmall,
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0, 4, 0, 0),
                                               child: Text(
                                                 'Your car is being evaluated by our tech, we are topping off your liquids and making one more quality check.',
@@ -709,7 +705,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                     .primaryBackground,
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     12, 0, 12, 0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -727,7 +723,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                             shape: BoxShape.circle,
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(8),
+                                            padding: const EdgeInsets.all(8),
                                             child: Icon(
                                               Icons.access_time_rounded,
                                               color:
@@ -749,7 +745,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12, 0, 0, 0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -769,7 +765,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                                       .bodySmall,
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0, 4, 0, 0),
                                               child: Text(
                                                 'Your car is currently in the bay and our technicians are changing your oil right now.',
@@ -797,7 +793,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                           ),
                           child: Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
+                                const EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -814,7 +810,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                         shape: BoxShape.circle,
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsets.all(8),
+                                        padding: const EdgeInsets.all(8),
                                         child: Icon(
                                           Icons.check_rounded,
                                           color: FlutterFlowTheme.of(context)
@@ -835,7 +831,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                 ),
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         12, 0, 0, 0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -854,7 +850,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0, 4, 0, 0),
                                           child: Text(
                                             'Our team is prepping the bay and your car in order for our techs to be able to change your oil.',
@@ -879,7 +875,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                           ),
                           child: Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
+                                const EdgeInsetsDirectional.fromSTEB(12, 0, 12, 0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -896,7 +892,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                         shape: BoxShape.circle,
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsets.all(8),
+                                        padding: const EdgeInsets.all(8),
                                         child: Icon(
                                           Icons.check_rounded,
                                           color: FlutterFlowTheme.of(context)
@@ -911,7 +907,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .primaryText,
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(4),
                                           bottomRight: Radius.circular(4),
                                           topLeft: Radius.circular(0),
@@ -923,7 +919,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                 ),
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         12, 0, 0, 0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -942,7 +938,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0, 4, 0, 0),
                                           child: Text(
                                             'Your car has been checked in and is waiting for an open bay in order to be worked on.',
@@ -971,38 +967,40 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
               hoverColor: Colors.transparent,
               highlightColor: Colors.transparent,
               onTap: () async {
-                await widget.appointmentRef!.reference
-                    .update(createCarAppointmentsRecordData(
-                  status: 'Complete',
-                ));
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(
-                      'Congrats! Your appointment is completed!',
-                      style: FlutterFlowTheme.of(context).titleSmall.override(
-                            fontFamily: 'Outfit',
-                            color: FlutterFlowTheme.of(context).alternate,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                    duration: Duration(milliseconds: 4000),
-                    backgroundColor: FlutterFlowTheme.of(context).primary,
-                  ),
-                );
-                context.pop();
+                // await widget.appointmentRef!.reference
+                //     .update(createCarAppointmentsRecordData(
+                //   status: 'Complete',
+                // ));
+                // ScaffoldMessenger.of(context).showSnackBar(
+                //   SnackBar(
+                //     content: Text(
+                //       'Congrats! Your appointment is completed!',
+                //       style: FlutterFlowTheme.of(context).titleSmall.override(
+                //             fontFamily: 'Outfit',
+                //             color: FlutterFlowTheme.of(context).alternate,
+                //             fontWeight: FontWeight.bold,
+                //           ),
+                //     ),
+                //     duration: const Duration(milliseconds: 4000),
+                //     // ignore: use_build_context_synchronously
+                //     backgroundColor: FlutterFlowTheme.of(context).primary,
+                //   ),
+                // );
+                // // ignore: use_build_context_synchronously
+                // Navigator.pop(context);
               },
               child: Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondary,
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       blurRadius: 5,
                       color: Color(0x411D2429),
                       offset: Offset(0, -2),
                     )
                   ],
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(0),
                     bottomRight: Radius.circular(0),
                     topLeft: Radius.circular(16),
@@ -1010,7 +1008,7 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 44),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 44),
                   child: Text(
                     'Mark as Complete',
                     textAlign: TextAlign.center,
@@ -1029,4 +1027,10 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
       ),
     );
   }
+}
+
+class ProductNameRecord {
+  String? get productDescription => null;
+  
+  static getDocumentOnce(param0) {}
 }
