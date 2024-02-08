@@ -365,11 +365,11 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
                     ),
                     Padding(
                       padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 0, 0),
-                      child: Text(
-                        Text("Appointment Details") as String,
+                      // child: Text(
+                      //   Text("Appointment Details"),
                        
-                      ).animateOnPageLoad(
-                          animationsMap['textOnPageLoadAnimation5']!),
+                      // ).animateOnPageLoad(
+                      //     animationsMap['textOnPageLoadAnimation5']!),
                     ),
                   ],
                 ),
@@ -1029,8 +1029,12 @@ class _AppointmentDetailsWidgetState extends State<AppointmentDetailsWidget>
   }
 }
 
-class ProductNameRecord {
-  String? get productDescription => null;
-  
+mixin ProductNameRecord {
   static getDocumentOnce(param0) {}
 }
+
+// class ProductNameRecord {
+//   String? get productDescription => null;
+  
+//   static getDocumentOnce(param0) {}
+// }
