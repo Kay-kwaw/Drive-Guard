@@ -3,6 +3,7 @@ import 'package:drive_guard/views/Screens/CarServices/appointment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutterflow_ui/flutterflow_ui.dart';
 
 class EditCarWidget extends StatefulWidget {
